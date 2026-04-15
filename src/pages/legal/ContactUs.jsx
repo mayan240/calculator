@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function ContactUs() {
   const [submitted, setSubmitted] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -67,7 +68,26 @@ export default function ContactUs() {
 
             <div style={{ marginTop: '3rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', color: 'var(--text-secondary)' }}>
               <strong>Direct Email:</strong>
-              <a href="mailto:wrok288iks+calculator@gmail.com" style={{ color: 'var(--primary)' }}>wrok288iks+calculator@gmail.com</a>
+              <div 
+                style={{ 
+                  color: 'var(--primary)', 
+                  cursor: 'pointer',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  fontWeight: '500'
+                }}
+                onClick={() => {
+                  navigator.clipboard.writeText('wrok288iks+calculator@gmail.com');
+                  setCopied(true);
+                  setTimeout(() => setCopied(false), 2000);
+                }}
+              >
+                wrok288iks+calculator@gmail.com
+                <span style={{ fontSize: '0.8rem', color: copied ? 'var(--primary)' : 'var(--text-secondary)' }}>
+                  {copied ? '(Copied!)' : '(Click to copy)'}
+                </span>
+              </div>
             </div>
           </div>
         </div>
