@@ -14,6 +14,17 @@ import CompoundInterest from './pages/financial/CompoundInterest';
 import BmrCalculator from './pages/health/BmrCalculator';
 import IdealWeight from './pages/health/IdealWeight';
 
+// Legal
+import PrivacyPolicy from './pages/legal/PrivacyPolicy';
+import TermsOfService from './pages/legal/TermsOfService';
+import ContactUs from './pages/legal/ContactUs';
+
+// Blog
+import BlogIndex from './pages/blog/BlogIndex';
+import Article from './pages/blog/Article';
+
+import Footer from './components/Footer';
+
 import './App.css';
 
 function App() {
@@ -44,10 +55,22 @@ function App() {
             <Route path="/standard" element={<StandardCalc />} />
             <Route path="/percentage" element={<PercentageCalculator />} />
             <Route path="/age" element={<AgeCalculator />} />
+
+            {/* Legal */}
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
+            <Route path="/contact" element={<ContactUs />} />
+
+            {/* Blog */}
+            <Route path="/blog" element={<BlogIndex />} />
+            <Route path="/blog/:id" element={<Article />} />
+
             {/* Fallback route */}
             <Route path="*" element={<Home />} />
           </Routes>
         </main>
+        
+        <Footer />
       </div>
     </div>
   );

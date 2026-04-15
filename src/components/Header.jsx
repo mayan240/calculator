@@ -15,6 +15,7 @@ const ALL_CALCULATORS = [
   { name: 'Age Calculator', path: '/age', category: 'Math', icon: Calculator },
   { name: 'Date Difference', path: '/date-diff', category: 'Math', icon: Calculator },
   { name: 'Scientific Calculator', path: '/scientific', category: 'Math', icon: Calculator },
+  { name: 'Blog & Articles', path: '/blog', category: 'Resources', icon: Activity },
 ];
 
 export default function Header({ toggleSidebar }) {

@@ -5,6 +5,13 @@ import './Sidebar.css';
 
 const categories = [
   {
+    name: 'Resources',
+    icon: <Menu size={20} />,
+    items: [
+      { name: 'Blog & Articles', path: '/blog', icon: <TrendingUp size={18} /> },
+    ]
+  },
+  {
     name: 'Trending',
     icon: <TrendingUp size={20} />,
     items: [
