@@ -67,7 +67,7 @@ export default function ContactUs() {
 
             <div style={{ marginTop: '3rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', color: 'var(--text-secondary)' }}>
               <strong>Direct Email:</strong>
-              <a href="mailto:support@calchub.com" style={{ color: 'var(--primary)' }}>support@calchub.com</a>
+              <a href="mailto:wrok288iks+calculator@gmail.com" style={{ color: 'var(--primary)' }}>wrok288iks+calculator@gmail.com</a>
             </div>
           </div>
         </div>
